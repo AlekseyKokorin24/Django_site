@@ -1,0 +1,13 @@
+{% extends 'main/layout.html' %}
+
+{% block content %}
+<main class="authorization">
+    <h1>Авторизация</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <p><button type="submit">Войти</button></p>
+    </form>
+</main>
+
+{% endblock %}
