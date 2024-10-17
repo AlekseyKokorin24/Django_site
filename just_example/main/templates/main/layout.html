@@ -12,11 +12,18 @@
 <body>
     <footer id="footer">
         <a href="{% url 'main' %}"><h1 class="site_name">Blog+-</h1></a><br>
-        <ul id="list_of_nav"><b>
+        <ul class="list_of_nav">
+        <b>
             <a href="{% url 'main' %}"><li><i class="fas fa-bolt"></i>Главная</li></a>    
             <a href="{% url 'notes' %}"><li><i class="fas fa-pen"></i>Записи</li></a>
             <a href="{% url 'rest_days' %}"><li><i class="fas fa-question"></i>Осталось...</li></a>
         </b>
+        </ul>
+        <ul class="registration_enter_list">
+        <b>
+            <a href="{% url 'enter' %}"><li>Вход</li></a> 
+            <a href="{% url 'registration' %}"><li>Регистрация</li></a>   
+        </b>    
         </ul>       
     </footer>
     <!-- <main class="fon-figure">

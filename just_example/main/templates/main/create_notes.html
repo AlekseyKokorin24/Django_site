@@ -1,0 +1,14 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Создание записи{% endblock %}
+
+{% block content%}
+<main class="create-note">
+    <h1>Новая запись</h1>
+    <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Создать запись</button>
+    </form>
+</main>
+{% endblock %}

@@ -4,6 +4,14 @@
 {% block title %}Записи{% endblock %}
 {% block content %}
 <main class="class-main">
-    <h1>Тут пока нет записей</h1>
+    <h1>Записи</h1>
+    {% for n in notes %}
+    <a href="{url 'create_notes'}"><div class="one_note">
+        <h1>{{ n.title }}</h1>
+        <p>{{ n.preview }}</p>
+    </div></a>
+    {% endfor %}
+    <a href="{% url 'create_note' %}" class="create_note">Создать запись</a>
+
 </main>
 {% endblock %}
